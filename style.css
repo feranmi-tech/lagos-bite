@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', sans-serif; }
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-overlay {
+    margin-top: 20px;
+    padding: 20px 40px;
+    
+    /* The blur magic */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px);         /* This creates the blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.hero { 
+    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg') center/cover; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; 
+}
+
+
+.hero h1 { font-size: 4rem; letter-spacing: 8px; }
+
+.bottom-nav { 
+    position: absolute; bottom: 0; width: 100%; display: flex; 
+    justify-content: space-around; background: #D35400; padding: 25px; 
+}
+
+.bottom-nav a { color: white; text-decoration: none; font-weight: bold; }
+
+.menu-grid { 
+    display: grid; grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; padding: 50px 10%; 
+}
+
+.menu-item img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; }
+
+#reservation { padding: 50px; text-align: center; background: #f9f9f9; }
+form { display: flex; flex-direction: column; max-width: 400px; margin: auto; gap: 10px; }
+button { background: #D35400; color: white; padding: 15px; border: none; cursor: pointer; }
+.add-btn {
+    background: #2E5C47;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.add-btn:hover { background: #1a3629; }
+
+#order-summary { padding: 40px; text-align: center; background: #fff; }
+#order-list { list-style: none; margin: 10px 0; }
