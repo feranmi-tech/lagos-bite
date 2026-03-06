@@ -1,19 +1,26 @@
+/* --- Base Styles --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', sans-serif; }
+
+.hero { 
+    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg') center/cover; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; 
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.hero h1 { font-size: 4rem; letter-spacing: 8px; }
+
 .hero-overlay {
     margin-top: 20px;
     padding: 20px 40px;
-    
-    /* The blur magic */
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px);         /* This creates the blur */
-    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
-    
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);         
+    -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     color: white;
@@ -21,14 +28,6 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.hero { 
-    height: 100vh; 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg') center/cover; 
-    display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; 
-}
-
-
-.hero h1 { font-size: 4rem; letter-spacing: 8px; }
 
 .bottom-nav { 
     position: absolute; bottom: 0; width: 100%; display: flex; 
@@ -47,6 +46,7 @@
 #reservation { padding: 50px; text-align: center; background: #f9f9f9; }
 form { display: flex; flex-direction: column; max-width: 400px; margin: auto; gap: 10px; }
 button { background: #D35400; color: white; padding: 15px; border: none; cursor: pointer; }
+
 .add-btn {
     background: #2E5C47;
     color: white;
@@ -62,3 +62,19 @@ button { background: #D35400; color: white; padding: 15px; border: none; cursor:
 
 #order-summary { padding: 40px; text-align: center; background: #fff; }
 #order-list { list-style: none; margin: 10px 0; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Forces menu items into ONE column */
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduces title size on smaller screens */
+    }
+
+    .menu-item {
+        margin-bottom: 20px;
+    }
+}
